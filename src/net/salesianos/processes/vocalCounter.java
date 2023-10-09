@@ -3,10 +3,14 @@ package net.salesianos.processes;
 public class vocalCounter {
     public static void main(String[] args) {
         int counter = 0; 
-        String line = args[0];
-        for(int x = 0 ; x < line.length() ; x++) {
-            if ((line.charAt(x)=='a') || (line.charAt(x)=='e') || (line.charAt(x)=='i') || (line.charAt(x)=='o') || (line.charAt(x)=='u')){ 
-               counter++;
+        String letter = args[0];
+        String text = args[1];
+
+        char letterChar = letter.charAt(0);
+
+        for(int x = 0 ; x < text.length() ; x++) {
+            if((text.charAt(x)== letterChar)){
+                counter++;
             }
         }
         System.out.println(counter);
